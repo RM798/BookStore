@@ -1,9 +1,5 @@
 ﻿@model IEnumerable<BookStore.Models.Category>
 
-@{
-    ViewData["Title"] = "Details";
-}
-
 <div class="container">
     <div class="row pt-4 pb-2">
         <div class="col-6">
@@ -42,9 +38,9 @@
                     @Html.DisplayFor(modelItem => item.DisplayOrder)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" class="btn btn-primary mx-1" asp-route-id="@item.Id"> <i class="bi bi-pencil-square"></i>Edit</a> |
+                    <a asp-action="Details" class="btn btn-secondary mx-1" asp-route-id="@item.Id"><i class="bi bi-ticket-detailed"></i>Details</a> |
+                    <a asp-action="Delete" class="btn btn-danger mx-1" asp-route-id="@item.Id"> <i class="bi bi-trash-fill"></i>Delete</a>
                 </td>
             </tr>
         }

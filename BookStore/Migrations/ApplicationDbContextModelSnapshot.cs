@@ -38,7 +38,7 @@ namespace BookStore.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CategoryRecord");
+                    b.ToTable("CategoryRecord", (string)null);
 
                     b.HasData(
                         new
