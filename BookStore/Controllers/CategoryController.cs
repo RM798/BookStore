@@ -49,23 +49,6 @@ namespace BookStore.Controllers
 
         }
 
-        [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public Category Save(Category details)
-        {
-            Category newdata = new Category();
-            newdata.Name = details.Name;
-            newdata.DisplayOrder = details.DisplayOrder;
-            if (ModelState.IsValid)
-            {
-                _db.CategoryRecord.Add(newdata); // Add to context
-                _db.SaveChanges();          // Save changes to database
-                //return RedirectToAction("Index"); // Redirect to a confirmation page or list
-            }
-
-            return newdata; // Return to the form if validation fails
-        }
-
         public IActionResult Edit(int? id)
         {
             if(id == null || id == 0)
